@@ -101,6 +101,6 @@ git clone git@github.com:uijdeveloper/ulviibadov-stepproject.git
 
 cd ulviibadov-stepproject/phonebook_final_frontend
 
-docker build -t frontend-app:v1.0.0 .
-docker run -di -e BACKEND=${backend_url}  --name  frontend-app -p 80:80 frontend-app:v1.0.0
+docker build -t my-frontend-app:v1.0.0 .
+docker run -di -e BACKEND=${backend_url}  --name  my-frontend-app -p 80:80 my-frontend-app:v1.0.0
 

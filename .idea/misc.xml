@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/phonebook" />
+    <file type="web" url="file://$PROJECT_DIR$/phonebook_final_frontend" />
   </component>
   <component name="ProjectType">
     <option name="id" value="jpab" />

@@ -101,6 +101,6 @@ git clone git@github.com:uijdeveloper/ulviibadov-stepproject.git
 
 cd ulviibadov-stepproject/phonebook
 
-docker build -t backend-app:v1.0.0 .
-docker run -di -e MYSQL_URL=${msql_url} -e MYSQL_USERNAME=${msql_username} -e MYSQL_PASSWORD=${msql_password} --name backend-app -p 80:80 backend-app:v1.0.0
+docker build -t my-backend-app:v1.0.0 .
+docker run -di -e MYSQL_URL=${msql_url} -e MYSQL_USERNAME=${msql_username} -e MYSQL_PASSWORD=${msql_password} --name my-backend-app -p 80:80 my-backend-app:v1.0.0
 
