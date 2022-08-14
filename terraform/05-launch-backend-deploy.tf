@@ -24,7 +24,7 @@ resource "aws_launch_template" "launch-backend" {
 
   update_default_version = true
 
-  key_name = "DanitTerraformProject"
+  key_name = "UlviAbbTechKey"
 
   network_interfaces {
     associate_public_ip_address = false
