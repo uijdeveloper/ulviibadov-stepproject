@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+	<h1>Form</h1>
+    <table>
+        <thead>
+        <tr style="padding: 10px">
+            <th> User id </th>
+            <th> Name </th>
+            <th> Phone </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${phonebooks.isEmpty()}">
+            <td colspan="2"> No Users Available </td>
+        </tr>
+
+        <tr th:each="phonebook:${phonebooks}">
+            <td><span th:text="${phonebook.id}"> User id </span></td>
+            <td><span th:text="${phonebook.userName}"> Name </span></td>
+            <td><span th:text="${phonebook.phoneNumber}"> Phone </span></td>
+        </tr>
+        </tbody>
+    </table>
+    <h1>Add New user</h1>
+    <form action="#" th:action="@{/user/add}" th:object="${phonebook}" th:method="post">
+        <p>Phone: <input type="text" th:field="*{phoneNumber}" name="phoneNumber"/></p>
+        <p>Name: <input type="text" th:field="*{userName}" name="userName"/></p>
+        <p><input type="submit" value="Submit" /> </p>
+    </form>
+
+    <h1>Update user</h1>
+    <form action="#" th:action="@{/user/edit}" th:object="${phonebook}" th:method="post">
+        <p>User Id: <input type="text" th:field="*{id}" name="id"/></p>
+        <p>Phone: <input type="text" th:field="*{phoneNumber}"  name="phoneNumber"/></p>
+        <p>Name: <input type="text" th:field="*{userName}" name="userName"/></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+
+    <h1>Delete user</h1>
+    <form action="#" th:action="@{/user/delete}" th:object="${phonebook}" th:method="post">
+        <p>User Id: <input type="text" th:field="*{id}" name="id"/></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+</body>
+</html>

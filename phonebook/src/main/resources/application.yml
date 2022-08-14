@@ -1,0 +1,32 @@
+server:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  port: 8080
+  servlet:
+    context-path: /phonebook
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: phonebook
+  datasource:
+    url: ${MYSQL_DB_URL:jdbc:mysql://localhost:3306/abbtech?useSSL=false}
+    username: ${MYSQL_DB_USERNAME:root}
+    password: ${MYSQL_DB_PASSWORD:unft11270506}
+    hikari:
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  liquibase:
+    enabled: ${SPRING_LIQUIBASE_ENABLED:true}
+    change-log: classpath:/liquibase/changelog-master.xml
+    drop-first: false
+    database-change-log-table: MS_PHONEBOOK_DBCHANGELOG
+    database-change-log-lock-table: MS_PHONEBOOK_DBCHANGELOGLOCK
+  profiles:
+    include: actuator
