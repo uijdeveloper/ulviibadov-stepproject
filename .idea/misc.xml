@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/phonebook" />
     <file type="web" url="file://$PROJECT_DIR$/phonebook_final_frontend" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-11" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="jpab" />
   </component>
